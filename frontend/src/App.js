@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./styles.css";
+import "./styles.scss";
 
 export default function App() {
   const [adImpressions, setAdImpressions] = useState(0);
@@ -39,7 +39,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="appContainer">
       <h1>Calculate Your Ad's Conversion Rate & Click Through Rate</h1>
       <div id="ctr">
         <h2>Calculate Click Through Rate</h2>
@@ -62,8 +62,10 @@ export default function App() {
               onChange={handleClicksChange}
             />
           </label>
+          <div className="resultsSection">
           <button onClick={calculateCTR}>Calculate CTR</button>
           <h3>Click Through Rate: {Math.round(cTR)}%</h3>
+          </div>
         </form>
       </div>
       <div id="conversionRate">
@@ -87,10 +89,12 @@ export default function App() {
               onChange={handleConvChange}
             />
           </label>
+          <div className="resultsSection">
           <button onClick={calculateConversionRate}>
             Calculate Conversion Rate
           </button>
           <h3>Conversion Rate: {Math.round(convRate)}%</h3>
+          </div>
         </form>
       </div>
     </div>

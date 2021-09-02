@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Styles from "./styles.css";
+import Styles from "./styles.scss";
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById("root");
